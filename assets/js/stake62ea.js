@@ -185,6 +185,7 @@ var walletAddress = null,
             contract.methods.allowance(walletAddress, stakingAddress)
             .call()
             .then(function(res, err) {
+                console.log(res)
                 //console.log("User approved for: " + res);
                 
                 if (parseInt(res) >= 100000000000000000000) {
