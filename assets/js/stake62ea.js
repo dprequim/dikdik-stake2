@@ -209,7 +209,8 @@ var walletAddress = null,
                         stakeLoader.showLoader();
                         const decimals = 18;
         const tokenAmountNoDecimals = (tokenAmt * (10 ** decimals)).toFixed(0);
-        const tokenAmountWithDecimals = BigInt(tokenAmountNoDecimals);
+        const tokenAmountString = parseFloat(tokenAmountNoDecimals).toFixed(0); // Fix here
+        const tokenAmountWithDecimals = BigInt(tokenAmountString);
         const correctAmount = tokenAmountWithDecimals.toString();
                         // let correctAmount = parseInt(tokenAmt.toString()) * 10 ** 18
                         // stakingContract.methods.deposit(correctAmount.toString())
