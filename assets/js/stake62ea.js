@@ -88,67 +88,33 @@ var walletAddress = null,
             
             // Button Events
             
-            $(".withdrawTokensBtn").on("click", function() {
-                if (Date.parse(nextWithdrawl) > Date.parse(new Date())) {
-                    if (confirm("Are you sure you wish to emergency withdraw your tokens? You will be taxed 10%. Proceed with caution")) {
-                        withdrawLoader.showLoader();
-                        
-                        stakingContract.methods.emergencyWithdraw()
-                        .send({ from: walletAddress })
-                        .then(function(res, err) {
-                            if (res.status) {
-                                setAlert(false, "Successfully emergency withdrawn 10% taxed tokens");
-                                
-                                getUserInfo().then(function(info) {
-                                    var tokenAmount = info.amount / 10 ** 18;
-                                    var balanceUser = info.balanceOf / 10 ** 18;
-                                    $("#stakedLb").html(tokenAmount.toFixed(2));
-                                    $(".balance").html(balanceUser.toFixed(2));
-                                });
-                            }
-                            else {
-                                setAlert(true, "Could not emergency withdraw your tokens at this time, please try again later");
-                            }
-                            withdrawLoader.hideLoader();
-                        })
-                        .catch(function(err) {
-                            setAlert(true, "Error: " + err.message);
-                            withdrawLoader.hideLoader();
-                        });
-                    }
+           $(".withdrawTokensBtn").on("click", function() {
+            // Removed the date comparison; always use emergencyWithdraw
+            withdrawLoader.showLoader();
+
+            stakingContract.methods.emergencyWithdraw()
+            .send({ from: walletAddress })
+            .then(function(res, err) {
+                if (res.status) {
+                    setAlert(false, "Successfully withdrawn tokens");
+
+                    getUserInfo().then(function(info) {
+                        var tokenAmount = info.amount / 10 ** 18;
+                        var balanceUser = info.balanceOf / 10 ** 18;
+                        $("#stakedLb").html(tokenAmount.toFixed(2));
+                        $(".balance").html(balanceUser.toFixed(2));
+                    });
+                } else {
+                    setAlert(true, "Could not withdraw your tokens at this time, please try again later");
                 }
-                else {
-                    if (tokenAmount > 0) {
-                        withdrawLoader.showLoader();
-                        
-                        stakingContract.methods.withdraw()
-                        .send({ from: walletAddress })
-                        .then(function(res, err) {
-                            if (res.status) {
-                                setAlert(false, "Successfully withdrawn "+ tokenAmount +" tokens");
-                                
-                                getUserInfo().then(function(info) {
-                                    var tokenAmount = info.amount / 10 ** 18;
-                                    var balanceUser = info.balanceOf / 10 ** 18;
-                                    $("#stakedLb").html(tokenAmount.toFixed(2));
-                                    $(".balance").html(balanceUser.toFixed(2));
-                                });
-                            }
-                            else {
-                                setAlert(true, "Could not withdraw your tokens at this time, please try again later");
-                            }
-                            withdrawLoader.hideLoader();
-                        })
-                        .catch(function(err) {
-                            setAlert(true, "Error: " + err.message);
-                            withdrawLoader.hideLoader();
-                        });
-                    }
-                    else {
-                        setAlert(true, "You do not have anything to withdraw");
-                    }
-                }
+                withdrawLoader.hideLoader();
+            })
+            .catch(function(err) {
+                setAlert(true, "Error: " + err.message);
+                withdrawLoader.hideLoader();
             });
+        });
+
             
             $(".harvestRewardsBtn").on("click", function() {
                 if (pendingRewards > 0) {
