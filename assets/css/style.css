@@ -17,13 +17,13 @@ html {
 }
 
 body {
-    background-image: url("../images/background.png");
-    background-position: center;
-    background-size: cover;
+    background-image: url(../images/banner_bg.jpg);
+    background-position: top;
+    background-size: 100% 56%;
     background-repeat: no-repeat;
     position: relative;
-    margin:0px;
-    background-color: #07081F;
+    margin: 0px;
+    background-color: #020c15;
 }
 
 :focus {
@@ -106,7 +106,7 @@ img {
 	max-width: 780px !important; 
     direction: ltr !important;
     margin: 0 auto;
-	background: #090a1ab3;
+	/* background: #090a1ab3; */
 	padding: 60px;
 	padding-bottom: 60px;
 	padding-top: 40px;
@@ -160,7 +160,7 @@ img {
 
 .form-control {
 	height: 42px;
-	border: 1px solid #ffa2bc;
+	border: 1px solid #00c5e6;
 	background: none;
 	width: 100%;
 	padding: 0 18px;
@@ -430,7 +430,7 @@ h4 {
 .form-control:active,
 .form-control:hover,
 .form-control:focus {
-    border: 1px solid #ffa2bc;
+    border: 1px solid white;
 }
 
 .custom-btn {
@@ -468,7 +468,7 @@ ul {
   margin: 0;
   padding: 15px;
   overflow: hidden;
-  background-color: #1b1e20;
+  background-color: #030b15;
 }
 
 li {
@@ -483,6 +483,7 @@ li .connectBtn {
   display: block;
   color: white;
   text-align: center;
+  font-size: 15px;
   padding: 10px 16px;
   text-decoration: none;
   border-left: 1px solid #000;
@@ -492,8 +493,8 @@ li .connectBtn {
   text-overflow: ellipsis;
   background-color: transparent;
   cursor:pointer;
-  border: 1px solid #ffa2bc;
-  border-radius: .5rem;
+  border: 2px solid #00c5e6;
+  border-radius: 70px;
 }
 
 .balance {
@@ -507,8 +508,8 @@ li .connectBtn {
 }
 
 li .connectBtn:hover:not(.active) {
-  background-color: #ffa2bc;
-  color:#000;
+  background-color: #00c5e6;
+  color:white;
 }
 
 .active {
@@ -647,11 +648,11 @@ p a {
 
 .bg-primary {
     opacity: 1;
-    background-color: #ffa2bc;
+    background-color: #00c5e6;
 }
 
 .dot {
-    background-color: #ffa2bc;
+    background-color: #00c5e6;
     border-radius: 9999px;
 }
 
@@ -899,7 +900,7 @@ table a {
 }
 
 .green {
-    color: #ffa2bc;
+    color: #00c5e6;
 }
 
 .btnRow {
@@ -936,7 +937,7 @@ table a {
 }
 
 .stakeBtn:hover {
-    background: #ffa2bc;
+    background: #00c5e6;
     cursor:pointer;
 }
 
@@ -948,7 +949,7 @@ table a {
     outline: none;
     border:none;
     font-weight: 900;
-    border-radius: 7px;
+    border-radius: 70px;
 }
 
 .withdrawTokensBtn:hover {
@@ -961,10 +962,10 @@ table a {
     height:100%;
     background: transparent;
     color: #fff;
-    border: 1px solid #ffa2bc;
+    border: 1px solid #00c5e6;
     outline: none;
     font-weight: 900;
-    border-radius: 7px;
+    border-radius: 70px;
 }
 
 .harvestRewardsBtn:hover {
@@ -1084,6 +1085,8 @@ table a {
 
 #wizard {
     margin-top: 50px;
+    /* background-color: #0B1D33; */
+    background-color: #0b1d33d6;
 }
 
 .alert {
