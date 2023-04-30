@@ -1,0 +1,63 @@
+/* Drawer styles */
+.drawer {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  background-color: #090a1ab3;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+  z-index: 1;
+  display: none;
+}
+
+.drawer.open {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #090a1ab3;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+  z-index: 1;
+  display: unset;
+}
+
+.drawer a i {
+  margin-right: 15px;
+}
+
+.drawer a {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  color: #f89eb7;
+}
+
+.drawer a:hover {
+  /* background-color: #ddd; */
+}
+
+/* Toggle button styles */
+#toggle-btn {
+  /* position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 20px; */
+  line-height: 40px;
+  background: unset;
+  padding-right: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
