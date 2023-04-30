@@ -5,7 +5,7 @@
   top: 0;
   left: -250px;
   height: 100%;
-  background-color: #090a1ab3;
+  /* background-color: #090a1ab3; */
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 100px;
@@ -19,7 +19,8 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #090a1ab3;
+  /* background-color: #102948; */
+  background-color: #091c31ed;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 100px;
@@ -37,7 +38,7 @@
   font-size: 18px;
   display: block;
   transition: 0.3s;
-  color: #f89eb7;
+  color: white;
 }
 
 .drawer a:hover {
@@ -60,4 +61,34 @@ nav {
   top: 0;
   width: 100%;
   z-index: 2;
+}
+
+.floating-right {
+  float: right;
+  display: flex;
+}
+
+.floating-right > * {
+  margin-left: 15px;
+}
+
+.fields_array h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+div#particles-js {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+a.active {
+  position: relative;
+  background: #134078;
 }

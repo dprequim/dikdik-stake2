@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>ZNT STAKING DAPP</title>
+    <meta content="TECH Staking Platform" property="og:title" />
+    <meta content="TECH Staking Platform" property="twitter:title" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="assets/css/project-temps.a399bff5e.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/customs.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/webfont.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/css/css.css" media="all" />
+    <link
+      href="assets/images/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link href="assets/images/logopng.html" rel="apple-touch-icon" />
+    <script src="assets/js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  </head>
+
+  <body>
+    <div id="particles-js" style=""></div>
+    <nav>
+      <ul>
+        <li>
+          <button id="toggle-btn">
+            <i
+              class="fa-solid fa-bars"
+              style="color: #00c5e6; font-size: 20px"
+            ></i>
+          </button>
+        </li>
+        <li>
+          <button id="toggle-btn">
+            <img src="assets/images/logo-vtrans.png" height="30" />
+          </button>
+        </li>
+        <li></li>
+        <li class="floating-right">
+          <a class="" style="line-height: 40px; color: white"
+            >$ZNT Tokens: <span class="balance">---</span></a
+          >
+          <span>
+            <span class="dot flex absolute h-3 w-3 top-0 right-0 -mt-1 -mr-1">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-3 w-3 bg-primary"
+              ></span>
+            </span>
+            <a class="connectBtn">
+              <span id="connectBtn" class="connect-btn">Connect Wallet</span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="drawer">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a class="active" href="#"><i class="fa-solid fa-seedling"></i> Farm</a>
+        <a href="swap.html"
+          ><i class="fa-solid fa-arrow-right-arrow-left"></i> Swap</a
+        >
+      </div>
+      <div class="header"></div>
+      <h1
+        class="white title"
+        style="
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        "
+      >
+        <span>COMING SOON!!!</span>
+      </h1>
+
+      <br />
+      <br />
+
+      <div class="footer"></div>
+    </div>
+
+    <div id="walletConnectModal" class="modal">
+      <div class="modal-content">
+        <h2>Choose Your Wallet</h2>
+        <p class="green" style="text-align: center">
+          Please Note: If you are using the MetaMask Mobile App, please select
+          the 'MetaMask' option and use within the 'MetaMask Browser'.
+        </p>
+        <br />
+        <div class="row2">
+          <div class="col2" id="modalMMConnect">
+            <img class="mm" src="assets/images/metamask.png" />
+            <h4>MetaMask</h4>
+          </div>
+          <div class="sep2"></div>
+          <div class="col2" id="modalWConnect">
+            <img src="assets/images/walletConnect.png" />
+            <h4>Wallet Connect</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/web3%401.5.2/dist/web3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/web3modal%401.9.4/dist/index.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/evm-chains%400.2.0/dist/umd/index.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/%40walletconnect/web3-provider%401.6.2/dist/umd/index.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/fortmatic%402.2.1/dist/fortmatic.js"
+    ></script>
+    <!-- <script type="text/javascript" src="assets/js/stake62ea.js"></script> -->
+    <script type="text/javascript" src="assets/js/customs.js"></script>
+  </body>
+</html>
